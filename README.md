@@ -39,3 +39,5 @@ Check our Contribution Guidelines for more information.
 
 License
 This project is licensed under the MIT License - see the LICENSE file for details.
+
+Join us in reshaping the landscape of ethical hacking with BadUSB. Whit3HatHack3rArmy welcomes you to the revolution. Let the USB mischief begin!
