@@ -1,0 +1,20 @@
+REM Title: Webhook Test Tool
+REM Author: White Hat Hacker
+REM Description: A simple test to see if a webhook is working correctly. Only thing needed is to replace the WEBHOOK URL with your actual webhook. Simple.
+REM Target: Discord Webhook
+REM Props: Beigeworm
+REM Version: 1.0
+REM Category: Tool
+
+#============================================================================================
+#                                      WEBHOOK TEST TOOL
+#============================================================================================
+
+# Replace the WEBHOOK URL below with your URL and leave the "". Note there needs to be space between = and the first ".
+$url = "WEBHOOK URL"
+
+# Define the body of the message and convert it to JSON
+$body = @{"username" = "Webhook Test Tool" ;"content" = "The Discord Webook is UP!"} | ConvertTo-Json
+
+# Use 'Invoke-RestMethod' command to send the message to Discord
+IRM -Uri $url -Method Post -ContentType "application/json" -Body $body
